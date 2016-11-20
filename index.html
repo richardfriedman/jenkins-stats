@@ -140,8 +140,11 @@
 
 			function addGraph() {
 				var project = $("#project").val();
+				if ( project.length <= 0 ) {
+					return;
+				}
 				if (pluginArray.indexOf(project) < 0) {
-					alert("Must be a knwon jenkins plugin.");
+					alert("Must be a known jenkins plugin.");
 					return;
 				}
 
