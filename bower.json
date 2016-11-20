@@ -1,0 +1,22 @@
+{
+  "name": "jenkins-stats",
+  "authors": [
+    "Richard Friedman <richardfriedman@yahoo.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "awesomplete": "^1.1.1",
+    "chart.js": "^2.4.0",
+    "moment": "^2.16.0"
+  }
+}
