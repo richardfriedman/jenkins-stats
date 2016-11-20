@@ -145,6 +145,11 @@
 				if (cacheStats[project]) {
 					render();
 				} else {
+					if (document.location.hash) {
+						document.location.hash += ",";
+					}
+					document.location.hash += project;
+
 					cacheProject(project, function() {
 						render();
 					});
@@ -157,7 +162,7 @@
 
 				function renderOnCountdown() {
 					countdown--;
-					if (countdown == 0) {
+					if (countdown == 0 && cacheTime.length > 0) {
 						render();
 					}
 				}
