@@ -62,7 +62,7 @@
 			// }
 			
 			function cacheProject( project, callback ){
-				$.getJSON("http://stats.jenkins.io/plugin-installation-trend/"+project+".stats.json",function(results){
+				$.getJSON("https://stats.jenkins.io/plugin-installation-trend/"+project+".stats.json",function(results){
 					for ( var ts in results.installations ){
 						if ( cacheTime.indexOf(ts) == -1 )
 							cacheTime.push(parseInt(ts));
