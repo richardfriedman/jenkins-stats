@@ -58,6 +58,9 @@
 			});
 
 			function clearGraph() {
+				pluginArray.forEach(function(project) {
+
+				})
 				document.location.hash = "";
 				$("#project").val("");
 				cacheTime = [];
@@ -156,8 +159,7 @@
 				}
 			}
 
-			if (document.location.hash && document.location.hash.length > 2) {
-				var projects = document.location.hash.substr(1).split(",");
+			function addProjects(projects) {
 				var countdown = projects.length;
 
 				function renderOnCountdown() {
@@ -175,6 +177,11 @@
 						renderOnCountdown();
 					}
 				});
+			}
+
+			if (document.location.hash && document.location.hash.length > 2) {
+				var projects = document.location.hash.substr(1).split(",");
+				addProjects(projects);
 			} else {
 				$("#project").val("job-dsl");
 			}
